@@ -89,33 +89,36 @@ document.querySelector(".search-icon").addEventListener("click", () => {
 
 
 
+
+
 <body>
 
 <header class="header">
   <div class="header-container">
-
-    <img src="img/logo.svg" class="logo" alt="KYROSCH">
-
-    <div class="header-right">
-      <button class="search-icon">🔍</button>
-      <button class="menu-mobile">☰</button>
+    <img src="img/logo.svg" class="logo" alt="KYROSCH logo">
+    
+    <div class="buscador">
+      <input type="text" placeholder="Buscar en KYROSCH...">
+      <button aria-label="Buscar">🔍</button>
     </div>
+<!-- paneles móviles (colocar fuera del header si quieres overlay) -->
+    <nav class="menu-mobile-panel" aria-hidden="true">
+      <a class="menu-link" href="/">Inicio</a>
+      <a class="menu-link" href="varones.html">Varones</a>
+      <a class="menu-link" href="mujeres.html">Mujeres</a>
+      <a class="menu-link" href="novedades.html">Novedades</a>
+      <a class="menu-link" href="ofertas.html">Ofertas</a>
+      <a class="menu-link" href="contactos.html">Contacto</a>
+  <!-- etc -->
+   </nav>
 
+   <div class="header-right">
+      <button class="mobile-search" aria-label="Buscar (móvil)">🔍</button>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
   </div>
-
-  <div class="buscador">
-    <input type="text" placeholder="Buscar en KYROSCH...">
-  </div>
-
-  <nav class="menu">
-    <a href="/" class="menu-link">Inicio</a>
-    <a href="/varones" class="menu-link">Varones</a>
-    <a href="/mujeres" class="menu-link">Mujeres</a>
-    <a href="/novedades" class="menu-link">Novedades</a>
-    <a href="/ofertas" class="menu-link">Ofertas</a>
-    <a href="/contacto" class="menu-link">Contacto</a>
-  </nav>
 </header>
+
 
 
     <div class="barra-envios">
@@ -309,5 +312,31 @@ document.querySelector(".search-icon").addEventListener("click", () => {
 </footer>
 
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', ()=> {
+  const btnMenu = document.querySelector('.menu-toggle');
+  const btnSearch = document.querySelector('.mobile-search');
+  const panelMenu = document.querySelector('.menu-mobile-panel');
+  const panelSearch = document.querySelector('.mobile-search-panel');
+
+  if(btnMenu && panelMenu){
+    btnMenu.addEventListener('click', ()=> panelMenu.classList.toggle('show'));
+  }
+  if(btnSearch && panelSearch){
+    btnSearch.addEventListener('click', ()=> panelSearch.classList.toggle('show'));
+  }
+
+  // cerrar cuando clic fuera (opcional)
+  document.addEventListener('click', (e)=>{
+    if(panelMenu && btnMenu && !panelMenu.contains(e.target) && !btnMenu.contains(e.target)){
+      panelMenu.classList.remove('show');
+    }
+    if(panelSearch && btnSearch && !panelSearch.contains(e.target) && !btnSearch.contains(e.target)){
+      panelSearch.classList.remove('show');
+    }
+  });
+});
+</script>
+
 </html>
 
