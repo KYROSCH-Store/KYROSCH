@@ -141,6 +141,56 @@ body {
         width: 140px;
     }
 }
+/* ===========================
+   MODO MOVIL
+=========================== */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  /* Ocultamos menú de PC */
+  .menu {
+    display: none;
+  }
+
+  /* Buscador en modo icono */
+  .buscador input {
+    display: none;
+  }
+
+  .buscador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .buscador button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Icono menú hamburguesa */
+  .menu-mobile {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
 
 .barra-envios {
     position: sticky;
