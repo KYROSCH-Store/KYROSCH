@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>KYROSCH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".scroll-reveal");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target); // Solo se anima una vez
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<script>
+const footer = document.querySelector(".footer-kyrosch");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      footer.classList.add("visible");
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(footer);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.querySelector(".footer-kyrosch");
+
+  if (!footer) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(footer);
+});
+</script>
+
+
+
+<body>
+
+   <header class="header">
+    <div class="header-container">
+        <img src="img/logo.svg"
+             alt="KYROSCH"
+             class="logo">
+    </div>
+    <div class="buscador">
+    <input type="text" placeholder="Buscar en KYROSCH...">
+    <button>🔍</button>
+    </div>
+    <nav class="menu">
+        <a href="/" class="menu-link">Inicio</a>
+        <a href="/varones" class="menu-link">Varones</a>
+        <a href="/mujeres" class="menu-link">Mujeres</a>
+        <a href="/novedades" class="menu-link">Novedades</a>
+        <a href="/ofertas" class="menu-link">Ofertas</a>
+        <a href="/contacto" class="menu-link">Contacto</a>
+    </nav>
+    </header>
+
+    <div class="barra-envios">
+        <span class="envios-texto">
+            Bienvenido a KYROSCH - Envíos a todo el Perú 
+        </span>
+
+        <img src="img/carro.svg" alt="envíos" class="envios-icono">
+    </div>
+  
+
+
+
+<section class="destacados">
+    <div class="destacado-imagen">
+            <img src="img/portada.png" alt="portada KYROSCH">
+    </div>
+</section>  
+<section class="destacados-2">
+    <div class="destacado-imagen-varon coleccion-card scroll-reveal">
+            <img src="img/varon.png" alt=" varon">
+            <div class="coleccion-botones">
+              <a href="/varones" class="bnt-principal"> Para Él </a>
+              <a href="/varones" class="bnt-secundario"> Descubrir Colección </a>
+            </div>
+    </div>
+
+    <div class="destacado-imagen-mujer coleccion-card scroll-reveal">
+            <img src="img/mujer.png" alt=" mujer">       
+            <div class="coleccion-botones">
+              <a href="/mujeres" class="bnt-principal"> Para Ella </a>
+              <a href="/mujeres" class="bnt-secundario"> Descubrir Colección </a>
+            </div>
+    </div>
+</section>
+<section class="mas-vendidos">
+    <h2>🔥 Más vendidos</h2>
+
+    <div class="grid-productos">
+
+        <div class="producto-card">
+            <img src="img/encaje.jpg">
+            <h3>Corset Loxi</h3>
+            <p class="precio">S/ 69</p>
+            <a href="#" class="btn-producto">Ver producto</a>
+        </div>
+
+        <div class="producto-card">
+            <img src="img/loxi.jpg">
+            <h3>Encaje Princesa</h3>
+            <p class="precio">S/ 54</p>
+            <a href="#" class="btn-producto">Ver producto</a>
+        </div>
+
+        <div class="producto-card">
+            <img src="img/aurora.jpg">
+            <h3>Vestido Aurora</h3>
+            <p class="precio">S/ 149</p>
+            <a href="#" class="btn-producto">Ver producto</a>
+        </div>
+
+        <div class="producto-card">
+            <img src="img/korina.jpg">
+            <h3>Set Korina</h3>
+            <p class="precio">S/ 89</p>
+            <a href="#" class="btn-producto">Ver producto</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="zona-venta">
+
+    <section class="porque-kyrosch">
+        <h2>¿Por qué elegir KYROSCH?</h2>
+
+        <div class="beneficios">
+
+            <div class="beneficio">
+                <span>🚚</span>
+                <h3>Envíos a todo el Perú</h3>
+                <p>Recibe tu pedido donde estés, rápido y seguro.</p>
+            </div>
+
+            <div class="beneficio">
+                <span>💎</span>
+                <h3>Calidad premium</h3>
+                <p>Prendas seleccionadas con acabados de alta calidad.</p>
+            </div>
+
+            <div class="beneficio">
+                <span>💳</span>
+                <h3>Pagos seguros</h3>
+                <p>Aceptamos pagos por Yape, Plin, Transferencia.</p>
+            </div>
+
+            <div class="beneficio">
+                <span>📦</span>
+                <h3>Atención rápida</h3>
+                <p>Respondemos en minutos por WhatsApp.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bloque-compra">
+        <h2>¿Listo para estrenar con KYROSCH?</h2>
+        <p>
+            Escríbenos ahora y te ayudamos a elegir tu talla, modelo y envío en minutos.
+        </p>
+
+        <a href="https://wa.me/message/PZPGSKT5KI3OL1" class="btn-compra">
+            💬 Comprar por WhatsApp
+        </a>
+
+        <div class="confianza">
+            <span>✔ Atención inmediata</span>
+            <span>✔ Pagos por Yape, Plin o transferencia</span>
+            <span>✔ Envíos a todo el Perú</span>
+        </div>
+    </section>
+
+</section>
+<section class="como-comprar">
+    <h2>¿Cómo comprar en KYROSCH?</h2>
+    <p class="subtitulo">Comprar es rápido, seguro y sin complicaciones</p>
+
+    <div class="pasos">
+
+        <div class="paso">
+            <span>1</span>
+            <h3>Elige tu producto</h3>
+            <p>Explora nuestras colecciones y selecciona el modelo que más te guste.</p>
+        </div>
+
+        <div class="paso">
+            <span>2</span>
+            <h3>Escríbenos por WhatsApp y envíanos una captura</h3>
+            <p>Te asesoramos con tallas, stock y formas de pago al instante.</p>
+        </div>
+
+        <div class="paso">
+            <span>3</span>
+            <h3>Recíbelo en casa</h3>
+            <p>Enviamos tu pedido a cualquier parte del Perú de forma segura.</p>
+        </div>
+
+    </div>
+</section>
+<footer class="footer-kyrosch">
+
+    <div class="footer-contenido">
+
+        <div class="footer-col">
+            <img src="img/logo1.svg" class="footer-logo">
+            <p>Moda premium para hombre y mujer.  
+            Envíos a todo el Perú.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>KYROSCH</h4>
+            <a href="/">Inicio</a>
+            <a href="/varones">Varones</a>
+            <a href="/mujeres">Mujeres</a>
+            <a href="/novedades">Novedades</a>
+            <a href="/ofertas">Ofertas</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Atención</h4>
+            <a href="#">Cambios y devoluciones</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Envíos</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <a href="https://wa.me/message/PZPGSKT5KI3OL1">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <p class="footer-correo">ventas@kyrosch.pe</p>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        © 2026 KYROSCH — Todos los derechos reservados
+    </div>
+
+</footer>
+
+</body>
+</html>
+
