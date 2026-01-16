@@ -169,28 +169,28 @@ cards.forEach(card => observer.observe(card));
             <img src="img/encaje.jpg">
             <h3>Corset Loxi</h3>
             <p class="precio">S/ 69</p>
-            <a href="#" class="btn-producto">Ver producto</a>
+            <a href="#" class="btn-producto">Comprar</a>
         </div>
 
         <div class="producto-card">
             <img src="img/loxi.jpg">
             <h3>Encaje Princesa</h3>
             <p class="precio">S/ 54</p>
-            <a href="#" class="btn-producto">Ver producto</a>
+            <a href="#" class="btn-producto">Comprar</a>
         </div>
 
         <div class="producto-card">
             <img src="img/aurora.jpg">
             <h3>Vestido Aurora</h3>
             <p class="precio">S/ 149</p>
-            <a href="#" class="btn-producto">Ver producto</a>
+            <a href="#" class="btn-producto">Comprar</a>
         </div>
 
         <div class="producto-card">
             <img src="img/korina.jpg">
             <h3>Set Korina</h3>
             <p class="precio">S/ 89</p>
-            <a href="#" class="btn-producto">Ver producto</a>
+            <a href="#" class="btn-producto">Comprar</a>
         </div>
 
     </div>
@@ -316,6 +316,44 @@ cards.forEach(card => observer.observe(card));
     </div>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const botones = document.querySelectorAll(".btn-producto");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // solo una vez
+      }
+    });
+  }, {
+    threshold: 0.35
+  });
+
+  botones.forEach(btn => observer.observe(btn));
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".beneficio");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  cards.forEach(card => observer.observe(card));
+});
+</script>
+
+
 
 </body>
 <script>
