@@ -365,8 +365,8 @@ body {
 
 /* seccion 3 por que elegirnos */
 .zona-venta {
-    background: #f3efe8;
-    padding: 120px 0;
+    background: #f1ede6;
+    padding: 40px 0;
 }
 .porque-kyrosch {
     padding: 80px 20px;
@@ -467,98 +467,168 @@ body {
 /* bloque de compra */
 .bloque-compra {
     text-align: center;
-    padding: 90px 20px;
-    background: transparent
+    padding: 30px 20px;
+    background: linear-gradient(180deg,  #f2ece4, #ffffff)
 }
 
 .bloque-compra h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
+    font-size: 32px;
     font-weight: 800;
+    color: #111;
+    margin-bottom: 16px;
+    letter-spacing: -0.5;
 }
 
 .bloque-compra p {
+    max-width: 620px;
+    margin: 0 auto 36px;
     font-size: 18px;
-    color: #444;
-    margin-bottom: 35px;
+    color: #555;
+    line-height: 1.6;
 }
 
 .btn-compra {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    font-size: 20px;
-    padding: 18px 45px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: linear-gradient(135deg, #25d366, #1ebe57);
+  color: #fff;
+  padding: 18px 42px;
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow: 0 14px 35px rgba(37, 211, 102, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: pulseWhats 2.6s infinite;
 }
 
 .btn-compra:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(37, 211, 102, 0.45);
+}
+
+@keyframes pulseWhats {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,.5);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37,211,102,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,0);
+  }
 }
 
 .confianza {
-    margin-top: 25px;
+    margin-top: 36px;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 24px;
+
     font-size: 15px;
-    color: #222;
-    font-weight: 600;
+    color: #444;
+}
+.confianza span { 
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+/* confianza para movil*/
+@media (max-width: 768px) {
+  .bloque-compra {
+    padding: 60px 16px;
+  }
+
+  .bloque-compra h2 {
+    font-size: 32px;
+  }
+
+  .bloque-compra p {
+    font-size: 16px;
+  }
+
+  .btn-compra {
+    width: 100%;
+    max-width: 340px;
+    padding: 18px;
+    font-size: 17px;
+  }
+
+  .confianza {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 28px;
+    align-items: center;
+  }
 }
 /*como comprar*/
+.bloque-compra {
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 60px;
+}
 .como-comprar {
-    background: #ffffff;
-    padding: 80px 40px;
+    padding: 90px 20px;
+    background: #fff;
     text-align: center;
+    padding-top: 60px;
 }
 
 .como-comprar h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 32px;
 }
 
 .como-comprar .subtitulo {
-    color: #666;
-    margin-bottom: 50px;
+    font-size: 18px;
+    color: #6b6b6b;
+    margin-bottom: 60px;
 }
 
 .pasos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 30px;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .paso {
-    background: #f7f7f7;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    transition: 0.4s;
+    background: #f1ede6;
+    padding: 45px 30px;
+    border-radius: 30px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .paso:hover {
     transform: translateY(-8px);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.12);
 }
 
-.paso span {
+.numero {
     display: inline-block;
+    align-items: center;
+    justify-content: center;
     background: #d4af37;
     color: black;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #d4b24c, #f1d77a);
     border-radius: 50%;
     font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 800;
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 18px;
+    padding: 13px;
 }
 
 .paso h3 {
@@ -568,7 +638,42 @@ body {
 
 .paso p {
     color: #555;
+    font-size: 16px;
 }
+.paso {
+    opacity: 0;
+    transition: translate(40px);
+    animation: fadeUp 0.9s ease forwards;
+}
+.paso:nth-child(1) { animation-delay: 0.1s; }
+.paso:nth-child(2) { animation-delay: 0.25s; }
+.paso:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .como-comprar {
+    padding: 70px 16px;
+  }
+
+  .como-comprar h2 {
+    font-size: 32px;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .paso {
+    padding: 28px 28px;
+  }
+}
+
 /* Footer */
 .footer-kyrosch {
     position: relative;
@@ -1182,7 +1287,6 @@ section {
   .mas-vendidos,
   .grid-productos {
     margin-bottom: -15px !important;
-    margin-top:-100;
   }
 }
 @media (max-width: 768px) {
@@ -1194,5 +1298,110 @@ section {
     background: #d4b24c;
     border-radius: 10px;
     margin: 0 auto 18px;
+  }
+}
+@media (max-width: 768px) {
+  .zona-venta {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .zona-venta h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .zona-venta p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 768px) {
+
+  .footer-kyrosch {
+    padding: 50px 22px 30px;
+  }
+
+  /* GRID PRINCIPAL */
+  .footer-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 26px;
+    align-items: start;
+  }
+
+  /* BLOQUE LOGO + FRASE */
+  .footer-col:nth-child(1) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-width: 160px; /* LOGO MÁS GRANDE */
+  }
+
+  .footer-col:nth-child(1) p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #cfcfcf;
+  }
+
+  /* KYROSCH LINKS */
+  .footer-col:nth-child(2) {
+    grid-column: 1 / 2;
+  }
+
+  /* ATENCIÓN */
+  .footer-col:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+
+  /* CONTACTO ocupa ancho completo */
+  .footer-col:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  /* TÍTULOS */
+  .footer-col h4 {
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .footer-col h4::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, transparent);
+    margin-top: 6px;
+  }
+
+  /* LINKS */
+  .footer-col a {
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: block;
+    color: #dcdcdc;
+  }
+
+  /* CONTACTO LINKS un poco más grandes */
+  .footer-col:nth-child(4) a {
+    font-size: 15px;
+  }
+
+  /* COPYRIGHT */
+  .footer-copy {
+    margin-top: 32px;
+    padding-top: 14px;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    grid-column: 1 / -1;
   }
 }
