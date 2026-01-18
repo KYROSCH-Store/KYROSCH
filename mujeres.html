@@ -10,23 +10,29 @@
 <body>
 <header class="header">
      <div class="header-container">
-        <a href="/" class="volver">Volver al inicio</a>
+        <a href="index.html" class="volver">Inicio</a>
         <div class="titulo-header">
-           Moda femenina KYROSCH – Estilo reluciente
+            KYROSCH - Moda femenina 
         </div>
 
-        <nav class= "menu">
-            <a href="/mujeres" class="menu-link">Mujeres</a>
-            <a href="/casacas" class="menu-link">Casacas</a>
-            <a href="/polos" class="menu-link">Polos</a>
-            <a href="/blusas" class="menu-link">Blusas</a>
-            <a href="/jeans" class="menu-link">Jeans</a>
-            <a href="/zapatillas" class="menu-link">Zapatillas</a>
-            <a href="/accesorios" class="menu-link">Accesorios</a>
-        </nav>
-     </div>
+        <nav class="menu-mobile-panel" aria-hidden="true">
+          <a class="menu-link" href="mujeres.html">Mujeres</a>
+          <a class="menu-link" href="blusas.html">Blusas</a>
+          <a class="menu-link" href="corsets.html">Corsets</a>
+          <a class="menu-link" href="vestidos.html">Vestidos</a>
+          <a class="menu-link" href="pantalones.html">Pantalones</a>
+          <a class="menu-link" href="accesorios.html">Accesorios</a>
+          <a class="menu-link" href="contactos.html">Contacto</a>
+           <!-- etc -->
+       </nav>
+
+       <div class="header-right">
+         <button class="mobile-search" aria-label="Buscar (móvil)">🔍</button>
+         <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+       </div>
+      </div>
 </header>
- <div class="barra-envios-varones">
+ <div class="barra-envios-mujeres">
         <span class="envios-texto-varones">
            Envíos gratis a partir de S/150 - ¡Compra ahora!
         </span>
@@ -38,5 +44,6 @@
             <img src="img/mujeres.png" alt="portada KYROSCH">
     </div>
 </section>
+<script src="js/menu.js"></script>
 
-<body>      
+</html>
