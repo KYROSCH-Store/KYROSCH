@@ -9,28 +9,31 @@
 </head>
 <body>
 <header class="header">
-     <div class="header-container">
-        <a href="index.html" class="volver">Inicio</a>
-        <div class="titulo-header">
-            KYROSCH - Moda femenina 
-        </div>
+  <div class="header-container">
+    <img src="img/logo.svg" class="logo" alt="KYROSCH logo">
+    
+    <div class="buscador">
+      <input type="text" placeholder="Buscar en KYROSCH...">
+      <button aria-label="Buscar">🔍</button>
+    </div>
+<!-- paneles móviles (colocar fuera del header si quieres overlay) -->
+    <nav class="menu-mobile-panel" aria-hidden="true">
+      <a class="menu-link" href="index.html">Inicio</a>
+      <a class="menu-link" href="mujeres.html">Mujeres</a>
+      <a class="menu-link" href="blusas.html">Blusas</a>
+      <a class="menu-link" href="corsets.html">Corsets</a>
+      <a class="menu-link" href="vestidos.html">Vestidos</a>
+      <a class="menu-link" href="pantalones.html">Pantalone</a>
+      <a class="menu-link" href="accesorios.html">Accesorios</a>
+      <a class="menu-link" href="contactos.html">Contacto</a>
+  <!-- etc -->
+   </nav>
 
-        <nav class="menu-mobile-panel" aria-hidden="true">
-          <a class="menu-link" href="mujeres.html">Mujeres</a>
-          <a class="menu-link" href="blusas.html">Blusas</a>
-          <a class="menu-link" href="corsets.html">Corsets</a>
-          <a class="menu-link" href="vestidos.html">Vestidos</a>
-          <a class="menu-link" href="pantalones.html">Pantalones</a>
-          <a class="menu-link" href="accesorios.html">Accesorios</a>
-          <a class="menu-link" href="contactos.html">Contacto</a>
-           <!-- etc -->
-       </nav>
-
-       <div class="header-right">
-         <button class="mobile-search" aria-label="Buscar (móvil)">🔍</button>
-         <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-       </div>
-      </div>
+   <div class="header-right">
+      <button class="mobile-search" aria-label="Buscar (móvil)">🔍</button>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </div>
 </header>
 <section class="banner-envio">
         <span class="pagina-interna">
