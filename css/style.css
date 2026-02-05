@@ -61,6 +61,7 @@ body {
 }
 @media (max-width: 768px) {
     .barra-envios {
+        top: 65px;
         height: 40px;
         padding: 2px;
         text-align: center;
@@ -70,6 +71,7 @@ body {
 }
 @media (max-width: 768px) {
     .barra-envios-mujeres {
+      top: 65px;
         height: 40px;
         padding: 2px;
         text-align: center;
@@ -1035,7 +1037,7 @@ section {
 
   .coleccion-card {
     width: 100% !important;
-    height: 360px;
+    height: 320px;
     border-radius: 18px;
   }
 
@@ -1505,6 +1507,10 @@ section {
     justify-content: center;
     font-size: 11px;
 
+
+  }
+  .banner-envio {
+    top: 65px;
   }
 }
 .blusas-productos {
