@@ -108,28 +108,103 @@ cards.forEach(card => observer.observe(card));
 
 <header class="header">
   <div class="header-container">
-    <img src="img/logo.svg" class="logo" alt="KYROSCH logo">
-    
-    <div class="buscador">
-      <input type="text" placeholder="Buscar en KYROSCH...">
-      <button aria-label="Buscar">🔍</button>
-    </div>
-<!-- paneles móviles (colocar fuera del header si quieres overlay) -->
-    <nav class="menu-mobile-panel" aria-hidden="true">
-      <a class="menu-link" href="index.html">Inicio</a>
-      <a class="menu-link" href="varones.html">Varones</a>
-      <a class="menu-link" href="mujeres.html">Mujeres</a>
-      <a class="menu-link" href="novedades.html">Novedades</a>
-      <a class="menu-link" href="ofertas.html">Ofertas</a>
-      <a class="menu-link" href="contactos.html">Contacto</a>
-  <!-- etc -->
-   </nav>
 
-   <div class="header-right">
-      <button class="mobile-search" aria-label="Buscar (móvil)">🔍</button>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <a href="index.html" class="brand" aria-label="KYROSCH">
+      <img src="img/logo.svg" class="logo" alt="KYROSCH logo">
+    </a>
+
+    <!-- Buscador (solo desktop) -->
+    <form class="buscador" action="#" role="search">
+      <input type="search" placeholder="Buscar en KYROSCH..." aria-label="Buscar en KYROSCH">
+      <button type="submit" aria-label="Buscar">🔍</button>
+    </form>
+
+    <!-- MENÚ DESKTOP -->
+    <nav class="nav-desktop" aria-label="Menú principal">
+      <ul class="menu-desktop">
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="has-submenu">
+          <a href="varones.html">Varones</a>
+          <ul class="submenu">
+            <li><a href="varones.html">Ver todo</a></li>
+            <li><a href="casacas.html">Casacas</a></li>
+            <li><a href="polos.html">Polos</a></li>
+            <li><a href="pantalones.html">Pantalones</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="mujeres.html">Mujeres</a>
+          <ul class="submenu">
+            <li><a href="mujeres.html">Ver todo</a></li>
+            <li><a href="blusas.html">Blusas</a></li>
+            <li><a href="corsets.html">Corsets</a></li>
+            <li><a href="vestidos.html">Vestidos</a></li>
+            <li><a href="pantalones-mujer.html">Pantalones</a></li>
+            <li><a href="accesorios-mujer.html">Accesorios</a></li>
+          </ul>
+        </li>
+
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="contactos.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- BOTONES (solo móvil) -->
+    <div class="header-right">
+      <button class="mobile-search-btn" type="button" aria-label="Buscar (móvil)">🔍</button>
+      <button class="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </div>
+
   </div>
+
+  <!-- OVERLAY -->
+  <div class="menu-overlay" data-close></div>
+
+  <!-- PANEL MÓVIL -->
+  <nav class="menu-mobile" aria-hidden="true">
+    <div class="menu-top">
+      <span class="menu-title">Menú</span>
+      <button class="menu-close" type="button" aria-label="Cerrar" data-close>✕</button>
+    </div>
+
+    <a class="m-link" href="index.html">Inicio</a>
+
+    <button class="m-subbtn" type="button" aria-expanded="false">
+      Varones <span class="chev">▾</span>
+    </button>
+    <div class="m-sub" aria-hidden="true">
+      <a href="varones.html">Ver todo</a>
+      <a href="casacas.html">Casacas</a>
+      <a href="polos.html">Polos</a>
+      <a href="pantalones.html">Pantalones</a>
+      <a href="accesorios.html">Accesorios</a>
+    </div>
+
+    <button class="m-subbtn" type="button" aria-expanded="false">
+      Mujeres <span class="chev">▾</span>
+    </button>
+    <div class="m-sub" aria-hidden="true">
+      <a href="mujeres.html">Ver todo</a>
+      <a href="blusas.html">Blusas</a>
+      <a href="corsets.html">Corsets</a>
+      <a href="vestidos.html">Vestidos</a>
+      <a href="pantalones-mujer.html">Pantalones</a>
+      <a href="accesorios-mujer.html">Accesorios</a>
+    </div>
+
+    <a class="m-link" href="novedades.html">Novedades</a>
+    <a class="m-link" href="ofertas.html">Ofertas</a>
+    <a class="m-link" href="contactos.html">Contacto</a>
+
+    <!-- buscador móvil (aparece al apretar 🔍) -->
+    <div class="mobile-search" aria-hidden="true">
+      <input type="search" placeholder="Buscar en KYROSCH..." aria-label="Buscar en KYROSCH móvil">
+    </div>
+  </nav>
 </header>
     <div class="barra-envios">
         <span class="envios-texto">
@@ -340,6 +415,8 @@ cards.forEach(card => observer.observe(card));
     </div>
 
 </footer>
+<script src="js/menu.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const botones = document.querySelectorAll(".btn-producto");
@@ -376,10 +453,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach(card => observer.observe(card));
 });
 </script>
-
-
-
-</body>
 <script>
 document.addEventListener('DOMContentLoaded', ()=> {
   const btnMenu = document.querySelector('.menu-toggle');
@@ -405,6 +478,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   });
 });
 </script>
+</body>
 
 </html>
 
