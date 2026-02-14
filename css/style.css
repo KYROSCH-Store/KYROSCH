@@ -1922,13 +1922,14 @@ section {
 }
 
 /* Botones móvil */
-.header-right{ display:none; gap:12px; align-items:center; }
+.header-right{ display:none; gap:0px; align-items:center; }
 .mobile-menu-btn,
 .mobile-search-btn{
   border:0;
   background:transparent;
   font-size:24px;
   cursor:pointer;
+  margin-right: 30px;
 }
 
 /* Overlay + panel móvil */
