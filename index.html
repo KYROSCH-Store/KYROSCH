@@ -47,63 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(el => observer.observe(el));
 });
 </script>
-
-<script>
-const footer = document.querySelector(".footer-kyrosch");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      footer.classList.add("visible");
-    }
-  });
-}, { threshold: 0.3 });
-
-observer.observe(footer);
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const footer = document.querySelector(".footer-kyrosch");
-
-  if (!footer) return;
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        footer.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  observer.observe(footer);
-});
-</script>
-<script>
-document.querySelector(".search-icon").addEventListener("click", () => {
-  const buscador = document.querySelector(".buscador");
-
-  buscador.style.display =
-    buscador.style.display === "block" ? "none" : "block";
-});
-</script>
-<script>
-const cards = document.querySelectorAll('.coleccion-card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('aparece');
-    }
-  });
-},{ threshold: 0.3 });
-
-cards.forEach(card => observer.observe(card));
-</script>
-
-
-
-
-
 <body>
 
 <header class="header">
@@ -412,11 +355,13 @@ cards.forEach(card => observer.observe(card));
 
     <div class="footer-copy">
         © 2026 KYROSCH — Todos los derechos reservados
+        desarrollado por <a href="https://vimosdigital.com">Vimos Digital</a>
     </div>
 
 </footer>
-<script src="js/menu.js"></script>
 
+<script src="js/menu.js"></script>
+<script src="js/footer.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const botones = document.querySelectorAll(".btn-producto");
@@ -447,37 +392,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.25
+    threshold: 0.1
   });
 
   cards.forEach(card => observer.observe(card));
 });
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', ()=> {
-  const btnMenu = document.querySelector('.menu-toggle');
-  const btnSearch = document.querySelector('.mobile-search');
-  const panelMenu = document.querySelector('.menu-mobile-panel');
-  const panelSearch = document.querySelector('.mobile-search-panel');
 
-  if(btnMenu && panelMenu){
-    btnMenu.addEventListener('click', ()=> panelMenu.classList.toggle('show'));
-  }
-  if(btnSearch && panelSearch){
-    btnSearch.addEventListener('click', ()=> panelSearch.classList.toggle('show'));
-  }
-
-  // cerrar cuando clic fuera (opcional)
-  document.addEventListener('click', (e)=>{
-    if(panelMenu && btnMenu && !panelMenu.contains(e.target) && !btnMenu.contains(e.target)){
-      panelMenu.classList.remove('show');
-    }
-    if(panelSearch && btnSearch && !panelSearch.contains(e.target) && !btnSearch.contains(e.target)){
-      panelSearch.classList.remove('show');
-    }
-  });
-});
-</script>
 </body>
 
 </html>

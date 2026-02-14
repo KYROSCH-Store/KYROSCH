@@ -421,7 +421,7 @@ body {
     box-shadow: 0 20px 50px rgba(0,0,0,0.08);
    
     opacity: 0;
-    transform: translate(50px) scale(0.96);
+    transform: translatey(50px) scale(0.96);
     transition: 
       opacity 0.8s ease,
       transform 0.8s cubic-bezier(.22, .61, .36, 1),
@@ -707,7 +707,6 @@ body {
     background: radial-gradient(circle at top, #1a1a1a 0%, #0b0b0b 70%);
     color: white;
     padding: 80px 10% 30px;
-    margin-top: 120px;
     opacity: 0;
     transform: translateY(60px);
     will-change: transform, opacity;
@@ -1655,10 +1654,14 @@ section {
   }
 }
 .blusas-cta-final {
+  width: 100%;
+  height:auto;
   background: linear-gradient(135deg, #4b2c82, #2e1d5f);
   color: #fff;
   text-align: center;
   padding: 60px 20px;
+
+
 }
 
 .blusas-cta-final h2 {
@@ -2053,4 +2056,9 @@ html.no-scroll, body.no-scroll{
   .buscador{ display:none; }
   .nav-desktop{ display:none; }
   .header-right{ display:flex; }
+}
+.seccion-contactos {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f1ede6;
 }
