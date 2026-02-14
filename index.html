@@ -354,14 +354,15 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <div class="footer-copy">
-        © 2026 KYROSCH — Todos los derechos reservados
-        desarrollado por <a href="https://vimosdigital.com">Vimos Digital</a>
+        © 2026 KYROSCH — Todos los derechos reservados <br>
+        desarrollado por <a href="https://vimosdigital/">Vimos Digital</a>
+
     </div>
 
 </footer>
-
 <script src="js/menu.js"></script>
 <script src="js/footer.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const botones = document.querySelectorAll(".btn-producto");
@@ -392,13 +393,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.1
+    threshold: 0.3
   });
 
   cards.forEach(card => observer.observe(card));
 });
 </script>
-
 </body>
 
 </html>
