@@ -1922,7 +1922,7 @@ section {
 }
 
 /* Botones móvil */
-.header-right{ display:none; gap:0px; align-items:center; z-index: 1000; }
+.header-right{ display:none; gap:0px; align-items:center; }
 .mobile-menu-btn,
 .mobile-search-btn{
   border:0;
