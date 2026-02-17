@@ -1977,6 +1977,7 @@ html.no-scroll, body.no-scroll{
   padding: 60px 30px;
   align-items: center;
   justify-content: space-between;
+  justify-content: center;
   background: #f1ede6;
 }
 .seccion-contactos-texto {
@@ -2131,4 +2132,484 @@ html.no-scroll, body.no-scroll{
 .ofertas-btn:hover {
   transform: translateY(-2px);
   background: linear-gradient(180deg, #e6c55a, #f3de8a);
+}
+/* =========================
+   KYROSCH CONTACT - BOUTIQUE
+   Colores:
+   Dorado: #c9a24d
+   Crema:  #f6f4ef
+========================= */
+.ky-contact{
+  --gold:#c9a24d;
+  --cream:#f6f4ef;
+  --ink:#0f0f12;
+  --soft: rgba(0,0,0,.08);
+  --soft2: rgba(0,0,0,.12);
+  --card: #ffffff;
+  --radius: 18px;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ===== HERO ===== */
+.kyc-hero{
+  padding: 72px 8% 54px;
+  background:
+    radial-gradient(700px 220px at 50% 0%, rgba(201,162,77,.25), transparent 65%),
+    linear-gradient(180deg, #ffffff, var(--cream));
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.kyc-hero-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kyc-hero-badge{
+  display:inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(201,162,77,.16);
+  border: 1px solid rgba(201,162,77,.35);
+  color: #6e5316;
+  font-weight: 700;
+  letter-spacing: .3px;
+  font-size: 12px;
+}
+
+.kyc-hero h1{
+  margin: 14px 0 10px;
+  font-size: 44px;
+  letter-spacing: -.6px;
+  line-height: 1.05;
+}
+
+.kyc-hero p{
+  max-width: 820px;
+  margin: 0 auto;
+  opacity: .82;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.kyc-hero-actions{
+  margin-top: 26px;
+  display:flex;
+  gap: 12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.kyc-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-weight: 800;
+  letter-spacing:.2px;
+  transition: transform .25s, box-shadow .25s, background .25s, color .25s;
+}
+
+.kyc-btn-gold{
+  background: var(--gold);
+  color: #111;
+  box-shadow: 0 12px 28px rgba(201,162,77,.28);
+}
+
+.kyc-btn-gold:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(201,162,77,.34);
+}
+
+.kyc-btn-ghost{
+  background: rgba(255,255,255,.65);
+  color: #111;
+  border: 1px solid rgba(0,0,0,.10);
+  backdrop-filter: blur(10px);
+}
+
+.kyc-btn-ghost:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+
+.kyc-trust{
+  margin-top: 24px;
+  display:flex;
+  justify-content:center;
+  gap: 14px;
+  flex-wrap:wrap;
+}
+
+.kyc-trust-item{
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 13px;
+  opacity: .92;
+}
+
+/* ===== CARDS ===== */
+.kyc-cards{
+  padding: 36px 8% 20px;
+}
+
+.kyc-cards-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.kyc-card{
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+  padding: 20px 18px;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+  position: relative;
+  overflow:hidden;
+}
+
+.kyc-card::before{
+  content:"";
+  position:absolute;
+  inset: -40px -40px auto -40px;
+  height: 90px;
+  background: radial-gradient(120px 60px at 30% 40%, rgba(201,162,77,.35), transparent 70%);
+  pointer-events:none;
+}
+
+.kyc-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(201,162,77,.35);
+  box-shadow: 0 18px 42px rgba(0,0,0,.10);
+}
+
+.kyc-card-top{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kyc-ico{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(201,162,77,.18);
+  border: 1px solid rgba(201,162,77,.35);
+  font-size: 20px;
+}
+
+.kyc-card h3{
+  margin:0;
+  font-size: 18px;
+  letter-spacing:-.2px;
+}
+
+.kyc-card p{
+  margin: 0 0 12px;
+  opacity:.78;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.kyc-link-btn {
+  display:inline-block;
+  text-decoration:none;
+  font-weight: 900;
+  color: #111;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(201,162,77,.22);
+  border: 1px solid rgba(201,162,77,.28);
+  transition: transform .2s
+}
+.kyc-link-btn:hover{
+  transform: translateY(-2px);
+  background: rgba(201,162,77,.32);
+}
+
+/* ===== FORM WRAP ===== */
+.kyc-form-wrap{
+  padding: 42px 8% 64px;
+}
+
+.kyc-form-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 18px;
+  align-items:start;
+}
+
+.kyc-form-card{
+  background: var(--card);
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 18px 44px rgba(0,0,0,.08);
+  padding: 24px;
+  position: relative;
+  overflow:hidden;
+}
+
+.kyc-form-card::after{
+  content:"";
+  position:absolute;
+  inset:auto -40px -50px -40px;
+  height: 160px;
+  background: radial-gradient(240px 120px at 50% 30%, rgba(201,162,77,.24), transparent 70%);
+  pointer-events:none;
+}
+
+.kyc-form-head h2{
+  margin: 0 0 6px;
+  font-size: 26px;
+  letter-spacing:-.3px;
+}
+
+.kyc-form-head p{
+  margin: 0 0 18px;
+  opacity:.78;
+  line-height: 1.6;
+}
+
+.kyc-form{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.kyc-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.kyc-field label{
+  display:block;
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: rgba(0,0,0,.80);
+}
+
+.kyc-field input,
+.kyc-field select,
+.kyc-field textarea{
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(246,244,239,.60);
+  outline:none;
+  font-size: 15px;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.kyc-field textarea{
+  min-height: 130px;
+  resize: vertical;
+}
+
+.kyc-field input:focus,
+.kyc-field select:focus,
+.kyc-field textarea:focus{
+  border-color: rgba(201,162,77,.65);
+  box-shadow: 0 0 0 4px rgba(201,162,77,.18);
+  transform: translateY(-1px);
+}
+
+/* SUBMIT */
+.kyc-submit-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap:wrap;
+}
+
+.kyc-submit{
+  border:none;
+  background: var(--gold);
+  color:#111;
+  font-weight: 950;
+  padding: 14px 20px;
+  border-radius: 999px;
+  cursor:pointer;
+  letter-spacing:.2px;
+  box-shadow: 0 12px 28px rgba(201,162,77,.26);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.kyc-submit:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(201,162,77,.34);
+}
+
+.kyc-mini-note{
+  font-size: 12px;
+  opacity: .70;
+  font-weight: 700;
+}
+
+/* ===== ASIDE ===== */
+.kyc-aside-card{
+  background: #121216;
+  color: #fff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 18px 44px rgba(0,0,0,.16);
+  position: sticky;
+  top: 90px;
+  overflow:hidden;
+}
+
+.kyc-aside-card::before{
+  content:"";
+  position:absolute;
+  inset: -60px -60px auto -60px;
+  height: 160px;
+  background: radial-gradient(260px 120px at 30% 40%, rgba(201,162,77,.30), transparent 70%);
+  pointer-events:none;
+}
+
+.kyc-aside-card h3{
+  margin: 0 0 10px;
+  color: var(--gold);
+  letter-spacing:.4px;
+}
+
+.kyc-aside-card ul{
+  margin: 0;
+  padding-left: 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  opacity: .92;
+  position: relative;
+  z-index: 1;
+}
+
+.kyc-divider{
+  height: 1px;
+  background: rgba(255,255,255,.10);
+  margin: 16px 0;
+}
+
+.kyc-contact-mini{
+  display:grid;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.kyc-mini-title{
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(201,162,77,.92);
+}
+
+.kyc-mini-text{
+  opacity:.86;
+  font-weight: 650;
+}
+
+/* Whats button glow */
+.kyc-whats-glow{
+  margin-top: 16px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+  font-weight: 950;
+  padding: 14px 16px;
+  border-radius: 999px;
+  color:#111;
+  background: var(--gold);
+  box-shadow:
+    0 18px 44px rgba(201,162,77,.28),
+    0 0 0 0 rgba(201,162,77,.40);
+  transition: transform .25s, box-shadow .25s;
+  position: relative;
+  z-index: 1;
+}
+
+.kyc-whats-glow:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 22px 52px rgba(201,162,77,.34),
+    0 0 0 6px rgba(201,162,77,.12);
+}
+
+/* ===== BOTTOM ===== */
+.kyc-bottom{
+  padding: 16px 8%;
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.kyc-bottom-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  flex-wrap:wrap;
+  opacity:.78;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .kyc-cards-inner{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kyc-form-inner{
+    grid-template-columns: 1fr;
+  }
+  .kyc-aside-card{
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 520px){
+  .kyc-hero{
+    padding: 62px 6% 44px;
+  }
+  .kyc-hero h1{
+    font-size: 34px;
+  }
+  .kyc-cards{
+    padding: 28px 6% 10px;
+  }
+  .kyc-cards-inner{
+    grid-template-columns: 1fr;
+  }
+  .kyc-form-wrap{
+    padding: 32px 6% 54px;
+  }
+  .kyc-row{
+    grid-template-columns: 1fr;
+  }
 }
