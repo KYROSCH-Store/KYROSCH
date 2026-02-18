@@ -2805,13 +2805,18 @@ html.no-scroll, body.no-scroll{
 
 /* Botón agregar dentro de cards */
 .btn-add-cart{
-  margin-top: 10px;
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 0;
-  cursor:pointer;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 22px;
   background: #c9a24d;
-  color:#111;
-  font-weight: 900;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition:0.3s;
+}
+
+.btn-add-cart:hover {
+  background:linear-gradient(180deg, #f1d77a, #d4b24c)
 }
