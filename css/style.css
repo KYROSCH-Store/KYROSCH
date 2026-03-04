@@ -1708,9 +1708,9 @@ section {
   background-color: #f1ede6;
 }
 .titulo-novedades h1{
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
-  color: #000000;
+  color: #111;
   font-weight: bold;
   top: 20px;
   margin: 20px 0;
@@ -1719,17 +1719,18 @@ section {
   font-size: 20px;
   text-align: center;
   color: #424242;
-  margin-bottom: 30px;
 }
 
 .titulo-novedades-seccion {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
+  background: #f1ede6;
 }
 @media (max-width: 768px) {
   .titulo-novedades h1 {
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px 10px;
   }
   .titulo-novedades h2{
@@ -1978,7 +1979,7 @@ html.no-scroll, body.no-scroll{
   align-items: center;
   justify-content: space-between;
   justify-content: center;
-  background: #f1ede6;
+  background: linear-gradient(180deg, #f1e4cd, #f1ede6);
 }
 .seccion-contactos-texto {
   width: 100%;
